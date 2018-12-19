@@ -4,3 +4,122 @@
 [class*="col"]{
   border: 1px dotted lightcoral
 }
+// RESETS
+a {
+  &:hover{
+    text-decoration: none;
+  }
+
+}
+
+//Layout
+
+// Seccion Sliders
+.slider{
+  min-height: 40vh;
+}
+
+// Seccion Ofertas especiales
+.mtb20{
+  margin: 20px 0
+}
+.mb0{
+  margin-bottom: 0;
+}
+
+.offer-wrap{
+  .desc{
+    min-height: 40vh;
+  }
+  .info{
+    min-height: 16vh;
+  }
+  .offer{
+    min-height: 28vh;
+  }
+}
+
+.belt{
+  .sections{
+    min-height: 10vh;
+  }
+}
+// fin Seccion ofertas especiales
+
+//Inicio Destacados, Revistas y Colecciones
+.highlight-content{
+  .highlight{
+    min-height: 20vh;
+  }
+}
+//Fin Destacados
+
+// Suscripcion a boletines
+.row-form{
+  .news{
+    height: 20vh;
+  }
+}
+
+// TEMA
+
+$bg-second : #EDEDED;
+$txt-color : #828282;
+
+// FOOTER
+
+// InicioFooter
+//Fondo
+.bg-second{
+  background-color: $bg-second;
+}
+.footer-logo{
+  img{
+    width: 130px;
+  }
+}
+
+// MENU FOOTER
+.footer-links{
+  display: grid;
+
+  grid-auto-flow: row;
+
+  // grid-template-columns: repeat(auto-fill, minmax(150px, 1fr) ) ;
+  // grid-template-columns: repeat(auto-fit);
+  grid-template-columns: repeat(auto-fill, 135px)  ;
+
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  .li-link{
+    // display:inline-block;
+    position: relative;
+    // background-color:  pink;
+    margin:5px 0;
+    // padding:0;
+    &:before{
+      content: "";
+      width: 1px;
+      height: 100%;
+      border-right: 1px solid $txt-color;
+      position: absolute;
+      right: 0;
+      // background-color: $txt-color;
+    }
+    // &:last-child:before{
+    //   background-color: white;
+    // }
+  }
+  .link{
+    // display:inline-block;
+    display: grid;
+    text-align: center;
+    color: $txt-color;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: -1px;
+    padding: 5px ;
+  }
+
+}
