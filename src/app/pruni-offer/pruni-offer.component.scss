@@ -1,0 +1,57 @@
+.img-belt{
+  width: 5rem;
+}
+.desc{
+  position: relative;
+  .secondary{
+    background-color: #DC0818;
+    padding: .5rem 1rem;
+  }
+  .title{
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+}
+.belt{
+  .title{
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+}
+.tag-offer{
+  .image-small{
+    width: 1.55rem;
+  }
+}
+.new{
+  text-transform: uppercase;
+  background-color:green;
+  color:white;
+  padding: .5rem 1rem;
+}
+
+.triangulo-equilatero-bottom-left {
+  width: 0;
+  height: 0;
+  border-right: 35px solid #FFE900;
+  border-top: 35px solid #FFE900;
+  border-left: 35px solid transparent;
+  border-bottom: 35px solid transparent;
+  span.discount{
+    font-size: 1.2rem;
+    text-align: center;
+    top: -1.7rem;
+    left: -.43rem;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin: 0px;
+    color:#DC0818;
+    font-weight: 500;
+  }
+
+}
+.portrait{
+  height: 40vh;
+
+}
