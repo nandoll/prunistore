@@ -1,0 +1,40 @@
+.search{
+  border: 1px solid ;
+  border-radius: 15px;
+  width: 100%;
+}
+
+.cart{
+  .nav-link{
+    font-size: .8rem;
+  }
+}
+
+.navbar{
+  padding: 0;
+}
+.navbar-nav{
+  padding: .25rem;
+}
+.circle{
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+
+
+  span{
+
+    position:absolute;
+    top:-.15rem;
+    left: .32rem;
+    font-size: .8rem;
+
+
+  }
+}
+.yellow{
+  position: relative;
+  background-color: #FFE900;
+}
+

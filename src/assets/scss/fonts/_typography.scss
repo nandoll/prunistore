@@ -1,0 +1,33 @@
+// Light
+@font-face{
+  font-family: 'Din Condensed';
+  font-style: normal;
+  font-weight: 300;
+  src: local('DINCond-Light '), local('DIN Cond-Light');
+  src: url('./assets/fonts/dincond-light-webfont.woff2') format('woff2'), url('./assets/fonts/dincond-light-webfont.woff') format('woff');
+}
+// Regular
+@font-face{
+  font-family: 'Din Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: local('DINCond-Regular'), local('DIN Cond-Regular');
+  src: url('./assets/fonts/dincond-regular-webfont.woff2') format('woff2'), url('./assets/fonts/dincond-regular-webfont.woff') format('woff');
+}
+// Medium
+@font-face{
+  font-family: 'Din Condensed';
+  font-style: normal;
+  font-weight: 500;
+  src: local('DINCond-Medium'), local('DIN Cond-Medium');
+  src: url('./assets/fonts/dincond-medium-webfont.woff2') format('woff2'), url('./assets/fonts/dincond-medium-webfont.woff') format('woff');
+}
+// Bold
+@font-face{
+  font-family: 'Din Condensed';
+  font-style: normal;
+  font-weight: 600;
+  src: local('DINCondensed'), local('DIN Condensed');
+  src: url('./assets/fonts/din_condensed_bold-webfont.woff2') format('woff2'), url('./assets/fonts/din_condensed_bold-webfont.woff') format('woff');
+}
+

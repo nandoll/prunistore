@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import Glide from '@glidejs/glide'
 
 @Component({
   selector: 'app-pruni-slider',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PruniSliderComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild("glide", { read: ElementRef }) glide: ElementRef
+
+  constructor() {
+  }
 
   ngOnInit() {
+    const element = this.glide.nativeElement,
+      options = {
+        type: 'carousel',
+        startAt: 0,
+        perView: 1,
+        autoplay: 4000
+      }
+    const slider = new Glide(element, options)
+    slider.mount()
   }
+
 
 }

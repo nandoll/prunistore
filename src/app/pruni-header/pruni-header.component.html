@@ -1,16 +1,85 @@
 <div class="container">
-  <div class="row">
-    <div class="col">logo</div>
+  <div class="row align-items-end">
+    <div class="col-sm-2">
+      <div class="logo" style="padding: .5rem;">
+        <img src="../../assets/img/logo.svg" alt="Pruni">
+
+      </div>
+    </div>
     <div class="col">
-      <div class="row">
-        <div class="col-12">buscador</div>
-        <div class="col-12">carrito</div>
+      <div class="row justify-content-end ">
+        <div class="col-sm-7">
+          <input type="text" name="buscar" class="search">
+        </div>
+        <div class="w-100"></div>
+        <div class="col-sm-7 ">
+          <div class="navbar-expand-lg cart ">
+            <ul class="navbar-nav profile justify-content-md-end">
+              <li class="nav-item">
+                <a class="nav-link text-red text-upper text-bold" href="#">Carrito <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-red text-upper text-bold" href="#">Mi cuenta</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-red text-upper text-bold" href="#">Iniciar Sesion</a>
+              </li>
+              <li class="nav-item">
+                <img src="../../assets/img/basket.png" alt="cesto">
+                <div class="circle yellow text-bold"><span>0</span></div>
+              </li>
+              <li class="nav-item">
+                <span class="nav-link text-red text-upper text-bold"> <img src="../../assets/img/cart.png" alt="carrito">
+                  S/ 0.00</span>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
-<div class="container-fluid">
+<div class="container-fluid" style="background-color:#DC0818;">
   <div class="row">
-    <div class="col">navegacion</div>
+    <div class="container">
+      <div class="navigation">
+        <div class="row">
+          <!-- <div class="col-6 col-sm-2"> Moneda PEN S/ 0.00 </div> -->
+          <div class="col">
+
+            <nav class="navbar navbar-expand-lg ">
+              <span style="color:white; font-size: 12px; text-align: left; font-weight: 500">Moneda PEN S/ 0.00</span>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08"
+                aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+                <ul class="navbar-nav">
+                  <li><img src="../../assets/img/peru.png" alt="Perú" class="image-fluid" style="display:grid; align-items:center;justify-content:center; padding-top: 7px"></li>
+                  <li class="nav-item active ">
+                    <a class="nav-link text-white text-upper text-bold" href="#">Inicio <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white text-upper text-bold" href="#">Colecciones</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white text-upper text-bold" href="#">Libros</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white text-upper text-bold" href="#">Revistas</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white text-upper text-bold" href="#">Suscripciones</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
   </div>
 </div>

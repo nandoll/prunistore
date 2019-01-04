@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import "assets/scss/fonts/typography";
+@import "./assets/scss/configuration/fonts";
 
 [class*="col"]{
   border: 1px dotted lightcoral
@@ -125,6 +127,9 @@ $txt-color : #828282;
 }
 
 /*Comunes*/
+.text-red{
+  color: #DC0818
+}
 .text-upper{
   text-transform: uppercase;
 }
@@ -134,4 +139,7 @@ $txt-color : #828282;
 .portrait{
   background-repeat:no-repeat;
   background-size: cover;
+}
+.text-bold{
+  font-weight: 500
 }
