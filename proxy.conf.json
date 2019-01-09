@@ -1,0 +1,7 @@
+{
+  "/api/*": {
+    "target": "https://toychihuan.pe",
+    "secure": false,
+    "changeOrigin": true
+  }
+}

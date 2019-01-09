@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConfigService } from '../config/config.service';
 
 @Component({
   selector: 'app-pruni-offer',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PruniOfferComponent implements OnInit {
 
-  constructor() { }
+  categories
+
+  constructor(private prestaShopService: ConfigService) {
+    this.prestaShopService.getCategories().subscribe(
+      (response) => {
+        this.categories = response
+        console.log(response)
+      }
+    )
+
+  }
 
   ngOnInit() {
   }
+
 
 }
