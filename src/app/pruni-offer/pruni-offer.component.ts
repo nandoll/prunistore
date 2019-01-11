@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ConfigService } from '../config/config.service';
+import { Observable } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-pruni-offer',
@@ -8,20 +10,31 @@ import { ConfigService } from '../config/config.service';
 })
 export class PruniOfferComponent implements OnInit {
 
-  categories
+  categories: Observable<any>
 
-  constructor(private prestaShopService: ConfigService) {
-    this.prestaShopService.getCategories().subscribe(
-      (response) => {
-        this.categories = response
-        console.log(response)
-      }
-    )
+  constructor(private activatedRoute: ActivatedRoute) {
 
   }
+
+
 
   ngOnInit() {
+    console.log("datos")
+    console.log(this.activatedRoute.snapshot.data.datos)
+
+    const datos = this.activatedRoute.snapshot.data.datos
+
+    console.log(datos)
   }
+
+  // getCategories(): Observable<any> {
+  //   this.prestaShopService.getCategories()
+  //     .subscribe(
+  //       (response) => this.categories = response,
+  //       error => console.log(error)
+  //     )
+  //   return this.categories
+  // }
 
 
 }
