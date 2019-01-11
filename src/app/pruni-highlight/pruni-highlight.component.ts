@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConfigService } from '../config/config.service';
 
 @Component({
   selector: 'app-pruni-highlight',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PruniHighlightComponent implements OnInit {
 
-  constructor() { }
+  constructor(private pruniService: ConfigService) { }
+
+  libros
 
   ngOnInit() {
+
+    this.pruniService.getBooks()
+      .subscribe(
+        (result) => {
+          this.libros = result["products"]
+          console.log(this.libros)
+        }
+      )
+
   }
 
 }

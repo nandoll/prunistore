@@ -57,27 +57,18 @@
     <!-- Fin - Ofertas especiales wrap -->
     <!-- Inicio - Cinto de secciones -->
     <div class="belt mtb20">
+
+
+      <!-- <pre>{{ cat.name | json }}</pre> -->
+      <!-- <pre>{{ cat.name | json }}</pre> -->
+
+
       <div class="row" style="background-color: #DC0818">
-        <div class="col sections">
-          <img src="../../assets/img/destacados.png" alt="Destacados" class="img-belt mx-auto d-block ">
-          <div class="title text-white text-center text-upper">Destacados</div>
-        </div>
-        <div class="col sections">
-          <img src="../../assets/img/colecciones.png" alt="Colecciones" class="img-belt mx-auto d-block">
-          <div class="title text-white text-center text-upper">Colecciones</div>
-        </div>
-        <div class="col sections">
-          <img src="../../assets/img/revistas.png" alt="Revistas" class="img-belt mx-auto d-block">
-          <div class="title text-white text-center tex  t-upper">Revistas</div>
-        </div>
-        <div class="col sections">
-          <img src="../../assets/img/libros.png" alt="Libros" class="img-belt mx-auto d-block">
-          <div class="title text-white text-center text-upper">Libros</div>
+        <div class="col sections" *ngFor="let cat of categories">
+          <img src="../../assets/img/destacados.png" [alt]="cat.name[1].value" class="img-belt mx-auto d-block ">
+          <div class="title text-white text-center text-upper"> {{ cat.name[1].value }}</div>
         </div>
       </div>
-
-      <div> {{ categories ]}</div>
-
     </div>
     <!-- Fin - Cinto de secciones -->
   </div>

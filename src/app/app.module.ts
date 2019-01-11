@@ -26,7 +26,7 @@ import { ConfigService } from './config/config.service';
 const route: Route[] = [
   // La primera parte es la ruta por "defecto"
   // En este caso será el "home"
-  { path: "", component: PruniOfferComponent, resolve: { datos: ConfigService } }
+  { path: "", component: PruniOfferComponent }
 ]
 // ahora se debe activar importando el RouterModule
 @NgModule({

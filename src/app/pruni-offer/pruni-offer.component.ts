@@ -10,25 +10,51 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PruniOfferComponent implements OnInit {
 
-  categories: Observable<any>
+  categories: any
+  categoriesObservable: Observable<any>
 
-  constructor(private activatedRoute: ActivatedRoute) {
+  constructor(
+    /* Inicio de variables inyectadas dentro del constructor */
+    private activatedRoute: ActivatedRoute,
+    private prestashopService: ConfigService
+    /* Fin de variables inyectadas dentro del constructor */
+  ) {
+
+    /* Inicio de la variable local Observable */
+    // this.categoriesObservable = this.prestashopService.getCategories();
+    // this.categoriesObservable.subscribe(response => console.log(response))
+    // console.log(this.categoriesObservable)
+    /* Fin de la variable local Observable */
+
+
 
   }
 
 
 
   ngOnInit() {
-    console.log("datos")
-    console.log(this.activatedRoute.snapshot.data.datos)
+    // console.log("datos")
+    // console.log(this.activatedRoute.snapshot.data.datos)
 
-    const datos = this.activatedRoute.snapshot.data.datos
+    // const datos = this.activatedRoute.snapshot.data.datos
 
-    console.log(datos)
+    // console.log(datos)
+    this.prestashopService.getCategories()
+      .subscribe(
+        /* Respuesta del servicio Categorias desde el API */
+        (response) => {
+          let cat = response
+          this.categories = cat["categories"].filter(ruta => ruta.id_parent == 2)
+
+
+
+          // this.categories = cat
+          console.log(this.categories)
+        })
   }
 
-  // getCategories(): Observable<any> {
-  //   this.prestaShopService.getCategories()
+  // getCategories() {
+  //   this.prestashopService.getCategories()
   //     .subscribe(
   //       (response) => this.categories = response,
   //       error => console.log(error)
